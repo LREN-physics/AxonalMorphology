@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------
-**REFERENCE:**
+# REFERENCE:
 
 This repository includes all the analysis scripts related with the scientific article:
 In-vivo estimation of axonal morphology from MRI and EEG data
@@ -18,7 +18,7 @@ The microscopic morphologic features of white matter we estimate are:
     •  the g-ratio dependence on the radius, g(r)
 
 --------------------------------------------------------------------------
-**AUTHORS:**
+# AUTHORS:
 
 Author: Rita Oliveira, PhD student
 Co-supervisor: Marzia De Lucia
@@ -37,70 +37,64 @@ Last updated: January 2021
 **CONTENT:**
 
 This package includes:
-    •  The analysis codes used to process the EEG data
-    •  The analysis codes concerning the proposed model for estimating 
-    in-vivo microstructural features of white matter tracts
+   - The analysis codes used to process the EEG data
+   - The analysis codes concerning the proposed model for estimating in-vivo microstructural features of white matter tracts
 
 --------------------------------------------------------------------------
-**DEPENDENCIES (not provided here):**
+# DEPENDENCIES (not provided here):
 
-• eeglab13_4_4b (https://sccn.ucsd.edu/eeglab/download.php)
-• fieldtrip-20191206 (https://www.fieldtriptoolbox.org/download/)
-• brainstorm3 (16/04/2021) (https://neuroimage.usc.edu/bst/download.php)
-• spm12 (https://www.fil.ion.ucl.ac.uk/spm/software/download/)
-• Optimization Toolbox - from MATLAB (https://www.mathworks.com/products/optimization.html)
-• Statistical and Machine Learning Toolbox - from MATLAB (https://www.mathworks.com/products/statistics.html)
-• inputsdlg function(https://www.mathworks.com/matlabcentral/fileexchange/25862-inputsdlg-enhanced-input-dialog-box)
-• peakseek function (https://www.mathworks.com/matlabcentral/fileexchange/26581-peakseek)
+- eeglab13_4_4b (https://sccn.ucsd.edu/eeglab/download.php)
+- fieldtrip-20191206 (https://www.fieldtriptoolbox.org/download/)
+- brainstorm3 (16/04/2021) (https://neuroimage.usc.edu/bst/download.php)
+- spm12 (https://www.fil.ion.ucl.ac.uk/spm/software/download/)
+- Optimization Toolbox - from MATLAB (https://www.mathworks.com/products/optimization.html)
+- Statistical and Machine Learning Toolbox - from MATLAB (https://www.mathworks.com/products/statistics.html)
+- inputsdlg function(https://www.mathworks.com/matlabcentral/fileexchange/25862-inputsdlg-enhanced-input-dialog-box)
+- peakseek function (https://www.mathworks.com/matlabcentral/fileexchange/26581-peakseek)
 
 These analysis scripts were run under MATLAB 2021a
 
 --------------------------------------------------------------------------
-**INPUT DATA:**
+# INPUT DATA:
 
 The initial data necessary to be able to run this analysis includes:
-    •  The raw data EEG (in the format block_X.TRC; and metrics obtained 
-    during the visual paradigm implemented, in the folder EEG/Matlab_Outputs)
-    •  The digitization file containing the position of the electrodes on 
-    the EEG cap (SubjectName.elec)
-    •  MRI g-ratio sampled along the visual transcallosal tract in matrix 
-    format (G_ratio_samples.mat)
-    •  The length of the visual transcallosal tract in matrix format 
-    (Tract_length.mat)
-    •  Freesurfer output files (segmented structural image as obtained from
-    Freesurfer: lh.BA_exvivo.annot, rh.BA_exvivo.annot, BA_exvivo.ctab,
-    T1.mgz, rh.pial, lh.pial)
+- The raw data EEG (in the format block_X.TRC; and metrics obtained during the visual paradigm implemented, in the folder EEG/Matlab_Outputs)
+- The digitization file containing the position of the electrodes on the EEG cap (SubjectName.elec)
+- MRI g-ratio sampled along the visual transcallosal tract in matrix format (G_ratio_samples.mat)
+- The length of the visual transcallosal tract in matrix format (Tract_length.mat)
+- Freesurfer output files (segmented structural image as obtained from Freesurfer: lh.BA_exvivo.annot, rh.BA_exvivo.annot, BA_exvivo.ctab, T1.mgz, rh.pial, lh.pial)
 	
 --------------------------------------------------------------------------
-DATA FOLDER ORGANIZATION:
+# **DATA FOLDER ORGANIZATION:**
 
 The folder structure looks like this:
 
-> Subjects
->> SubjectName
->>> EEG
->>>> Originals  
->>>> Matlab_Outputs
->>>> Preprocessed      
->>>> Delays 
->>>> Statistics_Source
->>> MRI
->>>> MicrostructureEstimation
->>>> Freesurfer
+- Subjects
+  - SubjectName
+    - EEG
+      - Originals  
+      - Matlab_Outputs
+      - Preprocessed      
+      - Delays 
+      - Statistics_Source
+    - MRI
+      - MicrostructureEstimation
+      - Free
+
 >> Study_Group_Results
 
 The majority of the folders are created along the scripts, with exception
 of the folders containing the data mentioned in the previous section.
 
 --------------------------------------------------------------------------
-**DESCRIPTION OF THE MAIN ANALYSIS STEPS:**
+# DESCRIPTION OF THE MAIN ANALYSIS STEPS:
 
-	•  SET PATHS 
+- **SET PATHS** 
 		Creates the path structure used in all the other scripts. 
 		User needs to edit this script and change the path variables 
 		to match the ones on the user's local computer.
 		
-	•  SET PARAMETERS
+- **SET PARAMETERS**
 		Creates the parameters needed to run the analysis. 
 		It defines the subjects to run, the conditions used on the 
 		EEG paradigm, the structure with the parameters for EEG
@@ -114,7 +108,7 @@ of the folders containing the data mentioned in the previous section.
 		cond_list is {'Left'} (set by default).
 
 		
-	•  EEG - PREPROCESSING 
+- **EEG - PREPROCESSING**
 		Preprocessing of EEG data with Fieldtrip and EEGlab software. This script 
 		assumes that the data was acquired under different blocks/runs 
 		and with different conidtions (e.g. presentation of visual 
@@ -134,7 +128,7 @@ of the folders containing the data mentioned in the previous section.
 		is forward to the scientific paper associated with these scripts). 	
 		
 		
-	•  EEG - SOURCE RECONSTRUCTION
+- **EEG - SOURCE RECONSTRUCTION**
 		Source reconstruction analysis with Brainstorm software. 
 		By using MRI data aquired on the same subjects, it performs
 		source reconstruction on the signals obtained in the previous step.
@@ -150,7 +144,7 @@ of the folders containing the data mentioned in the previous section.
 		brain hemispheres (set by default). 
 	
 		
-	•  EEG - CLUSTER PERMUTATION 
+- **EEG - CLUSTER PERMUTATION**
 		Performs cluster permutation statistics on the current source 
 		density values obtained in the source reconstruction (step: EEG - 
 		SOURCE RECONSTRUCTION), within a given region of interest.
@@ -160,7 +154,7 @@ of the folders containing the data mentioned in the previous section.
 		and secondary visual cortices - V1V2 - on the left or right
 		brain hemispheres (set by default).
 		
-	•  EEG - IHTT ESTIMATION 
+- **EEG - IHTT ESTIMATION**
 		Estimates the IHTT, in ms, from the group average current source 
 		density, obtained in the previous step (EEG - SOURCE RECONSTRUCTION).
 		Using sub-groups of the available subjects, calculates a
@@ -173,7 +167,7 @@ of the folders containing the data mentioned in the previous section.
 		given that the IHTT concerned only the 'Left' visual stimulation, 
 		cond_list is {'Left'} (set by default).
 		
-	•  BIOPHYSICAL MODEL OF MICROSTRUCTURE
+- **BIOPHYSICAL MODEL OF MICROSTRUCTURE**
 		Estimates microstructural features of the white matter:
 		the axon radius distribution, P(r), and the g-ratio dependence on
 		the radius, g(r).
@@ -190,7 +184,7 @@ of the folders containing the data mentioned in the previous section.
 		estimated in the previous step (EEG - IHTT ESTIMATION).		  
 
 --------------------------------------------------------------------------
-**HOW TO USE:**
+# HOW TO USE:
 
 Important: the analysis scripts need to be run from the 'main' scripts folder.
 
@@ -211,7 +205,7 @@ The biophysical model of microstructure can finally be run with:
     MODEL()                          - requires output files from EEG_Step4_IHTT 
 
 --------------------------------------------------------------------------
-**NOTE:**
+# NOTE:
 
 The data used in the original publication is publicly available.	
 The analysis steps EEG - IHTT ESTIMATION and 
