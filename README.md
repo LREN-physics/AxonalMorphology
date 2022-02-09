@@ -34,7 +34,7 @@ Email: rita.oliveira.uni@gmail.com
 Last updated: January 2021
 
 --------------------------------------------------------------------------
-**CONTENT:**
+# CONTENT:
 
 This package includes:
    - The analysis codes used to process the EEG data
@@ -189,20 +189,20 @@ of the folders containing the data mentioned in the previous section.
 Important: the analysis scripts need to be run from the 'main' scripts folder.
 
 The first step is to set your local data paths by editing and running the script:
-    Set_paths()
+> Set_paths()
 
 Then edit and run the following script to define the parameters for your analysis:
-    Set_params()
+> Set_params()
 
 The EEG analysis consists of several parts that can be run independently 
 as long as the previous step was performed:
-    EEG_Step1_Preprocessing()        - requires manual input to clean the EEG data
-    EEG_Step2_SourceReconstruction() - requires outputs from EEG_Step1_Preprocessing as well manual input on Brainstorm
-    EEG_Step3_ClusterPermutation()   - requires output files from EEG_Step2_SourceReconstruction
-    EEG_Step4_IHTT()                 - requires output files from EEG_Step2_SourceReconstruction
+> EEG_Step1_Preprocessing()        - requires manual input to clean the EEG data
+> EEG_Step2_SourceReconstruction() - requires outputs from EEG_Step1_Preprocessing as well manual input on Brainstorm
+> EEG_Step3_ClusterPermutation()   - requires output files from EEG_Step2_SourceReconstruction
+> EEG_Step4_IHTT()                 - requires output files from EEG_Step2_SourceReconstruction
 
 The biophysical model of microstructure can finally be run with:
-    MODEL()                          - requires output files from EEG_Step4_IHTT 
+> MODEL()                          - requires output files from EEG_Step4_IHTT 
 
 --------------------------------------------------------------------------
 # NOTE:
