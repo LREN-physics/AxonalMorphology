@@ -1,5 +1,5 @@
---------------------------------------------------------------------------
-# REFERENCE:
+
+## REFERENCE:
 
 This repository includes all the analysis scripts related with the scientific article:  
 *In-vivo estimation of axonal morphology from MRI and EEG data*  
@@ -17,8 +17,8 @@ The microscopic morphologic features of white matter we estimate are:
 - the axonal radius distribution, P(r)
 - the g-ratio dependence on the radius, g(r)
 
---------------------------------------------------------------------------
-# AUTHORS:
+
+## AUTHORS:
 
 Author: Rita Oliveira, PhD student  
 Co-supervisor: Marzia De Lucia  
@@ -34,15 +34,14 @@ Email: rita.oliveira.uni@gmail.com
 
 Last updated: January 2021
 
---------------------------------------------------------------------------
-# CONTENT:
+## CONTENT:
 
 This package includes:
    - The analysis codes used to process the EEG data
    - The analysis codes concerning the proposed model for estimating in-vivo microstructural features of white matter tracts
 
---------------------------------------------------------------------------
-# DEPENDENCIES (not provided here):
+
+## DEPENDENCIES (not provided here):
 
 - eeglab13_4_4b (https://sccn.ucsd.edu/eeglab/download.php)
 - fieldtrip-20191206 (https://www.fieldtriptoolbox.org/download/)
@@ -55,8 +54,7 @@ This package includes:
 
 These analysis scripts were run under MATLAB 2021a.
 
---------------------------------------------------------------------------
-# INPUT DATA:
+## INPUT DATA (not provided here):
 
 The initial data necessary to be able to run this analysis includes:
 - The raw data EEG (in the format block_X.TRC; and metrics obtained during the visual paradigm implemented, in the folder EEG/Matlab_Outputs)
@@ -65,8 +63,7 @@ The initial data necessary to be able to run this analysis includes:
 - The length of the visual transcallosal tract in matrix format (Tract_length.mat)
 - Freesurfer output files (segmented structural image as obtained from Freesurfer: lh.BA_exvivo.annot, rh.BA_exvivo.annot, BA_exvivo.ctab, T1.mgz, rh.pial, lh.pial)
 	
---------------------------------------------------------------------------
-# **DATA FOLDER ORGANIZATION:**
+## **DATA FOLDER ORGANIZATION:**
 
 The folder structure looks like this:
 
@@ -86,8 +83,8 @@ The folder structure looks like this:
 The majority of the folders are created along the scripts, with exception
 of the folders containing the data mentioned in the previous section.
 
---------------------------------------------------------------------------
-# DESCRIPTION OF THE MAIN ANALYSIS STEPS:
+
+## DESCRIPTION OF THE MAIN ANALYSIS STEPS:
 
 - **SET PATHS** 
 	Creates the path structure used in all the other scripts. 
@@ -127,8 +124,7 @@ Estimates microstructural features of the white matter: the axon radius distribu
 
 	*To replicate the results of the associated scientific article, the tract to be used is the visual transcallosal tract, connecting the primary and secondary visual areas (V1V2) from both hemispheres and the delay is the IHTT (using a left visual field stimulation). The script assumes as default that the 'G_ratio_samples.mat' and 'length.mat' were obtained on this tract and loads the IHTT estimated in the previous step (EEG - IHTT ESTIMATION).*		  
 
---------------------------------------------------------------------------
-# HOW TO USE:
+## HOW TO USE:
 
 Important: the analysis scripts need to be run from the 'main' scripts folder.
 
@@ -151,11 +147,10 @@ as long as the previous step was performed:
 The biophysical model of microstructure can finally be run with:
 > MODEL()                          - requires output files from EEG_Step4_IHTT 
 
---------------------------------------------------------------------------
-# NOTE:
+
+<!--- ## NOTE:
 
 The data used in the original publication is publicly available.	
 The analysis steps EEG - IHTT ESTIMATION and 
 BIOPHYSICAL MODEL OF MICROSTRUCTURE can be run on the provided data.
-
---------------------------------------------------------------------------
+ --->
