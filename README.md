@@ -54,7 +54,7 @@ These analysis scripts were run under MATLAB 2021a.
 ## INPUT DATA (not provided here):
 
 The initial data necessary to be able to run this analysis includes:
-- The raw data EEG (in the format block_X.TRC; and metrics obtained during the visual paradigm implemented, in the folder EEG/Matlab_Outputs)
+- The raw data EEG (in the format block_X.TRC; and metrics obtained during the implemented visual paradigm)
 - The digitization file containing the position of the electrodes on the EEG cap (SubjectName.elec)
 - MRI g-ratio sampled along the visual transcallosal tract in matrix format (G_ratio_samples.mat)
 - The length of the visual transcallosal tract in matrix format (Tract_length.mat)
