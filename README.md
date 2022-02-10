@@ -74,7 +74,7 @@ The folder structure looks like this:
       - Statistics_Source
     - MRI
       - MicrostructureEstimation
-      - Free
+      - Freesurfer
 -  Study_Group_Results
 
 The majority of the folders are created along the scripts, with exception
