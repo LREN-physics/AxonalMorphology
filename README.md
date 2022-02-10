@@ -2,18 +2,16 @@
 ## REFERENCE:
 
 This repository includes all the analysis scripts related with the scientific article:  
-*In-vivo estimation of axonal morphology from MRI and EEG data*  
+*In-vivo estimation of axonal morphology from Magnetic Resonance Imaging (MRI) and electroencephalography (EEG) data*  
 Rita Oliveira, Andria Pelentritou, Giulia Di Domenicantonio, Marzia De Lucia, Antoine Lutti
 
-The main objective is to use data collected in-vivo in humans to estimate 
-microscopic morphologic features of the white matter tracts.
+The main objective is to use data collected in-vivo in humans to estimate microscopic morphologic features of the white matter tracts.
 
-The in-vivo data estimated along a white matter tract of interest includes:
+The in-vivo data used in the proposed approach is:
 - the MRI g-ratio sampled along the visual transcallosal white matter tract
-- a measure of conduction velocity estimated from an EEG measure of 
-interhemispheric transfer time (IHTT)
+- a conduction velocity estimated from an EEG measure of interhemispheric transfer time (IHTT)
 
-The microscopic morphologic features of white matter we estimate are:
+The microscopic morphologic features of white matter we estimate with the proposed approach are:
 - the axonal radius distribution, P(r)
 - the g-ratio dependence on the radius, g(r)
 
@@ -37,9 +35,8 @@ Last updated: January 2021
 ## CONTENT:
 
 This package includes:
-   - The analysis codes used to process the EEG data
+   - The analysis codes for processing of EEG data
    - The analysis codes concerning the proposed model for estimating in-vivo microstructural features of white matter tracts
-
 
 ## DEPENDENCIES (not provided here):
 
