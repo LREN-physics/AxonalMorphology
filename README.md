@@ -1,9 +1,10 @@
 
 ## REFERENCE:
 
-This repository includes all the analysis scripts related with the scientific article:  
+This repository includes all the analysis scripts related to the scientific article:  
 *In-vivo estimation of axonal morphology from Magnetic Resonance Imaging (MRI) and electroencephalography (EEG) data*  
 Rita Oliveira, Andria Pelentritou, Giulia Di Domenicantonio, Marzia De Lucia, Antoine Lutti
+https://www.frontiersin.org/articles/10.3389/fnins.2022.874023/full
 
 The main objective is to use data collected in-vivo in humans to estimate microscopic morphologic features of the white matter tracts.
 
@@ -101,7 +102,7 @@ Preprocessing of EEG data with Fieldtrip and EEGlab software. This script assume
 		
 		
 - **EEG - SOURCE RECONSTRUCTION**
-Source reconstruction analysis with Brainstorm software. By using MRI data aquired on the same subjects, it performs source reconstruction on the signals obtained in the previous step. It also extracts the current source density values inside a given region of interest within the brain and prepares the data in a format that can be used in matlab easily (for the step: EEG - IHTT ) User input is needed as detailed in the function matlab code. Freesurfer output files are needed in this step.
+Source reconstruction analysis with Brainstorm software. By using MRI data acquired on the same subjects, it performs source reconstruction on the signals obtained in the previous step. It also extracts the current source density values inside a given region of interest within the brain and prepares the data in a format that can be used in Matlab easily (for the step: EEG - IHTT ) User input is needed as detailed in the function matlab code. Freesurfer output files are needed in this step.
 
 	*To replicate the results of the associated scientific article, the region of interest is the region containing the primary and secondary visual cortices - V1V2 - on the left or right brain hemispheres (set by default).*
 	
@@ -145,9 +146,9 @@ The biophysical model of microstructure can finally be run with:
 > MODEL()                          - requires output files from EEG_Step4_IHTT 
 
 
-<!--- ## NOTE:
+## NOTE:
 
-The data used in the original publication is publicly available.	
-The analysis steps EEG - IHTT ESTIMATION and 
-BIOPHYSICAL MODEL OF MICROSTRUCTURE can be run on the provided data.
- --->
+The data used in the original publication is publicly available [here](https://doi.org/10.5281/zenodo.6027335).
+
+The analysis steps EEG - IHTT ESTIMATION and BIOPHYSICAL MODEL OF MICROSTRUCTURE can be run on the provided data.
+
